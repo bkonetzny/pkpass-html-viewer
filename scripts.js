@@ -20,8 +20,12 @@
 					var zip = new JSZip(e.target.result);
 
 					var $pass = $('#pass');
+					$pass.find('dl, img').remove();
+					$pass.find('.side.front, .primaryFields').css('background-image', 'none');
 					var $meta = $('#meta dl');
+					$meta.html('');
 					var $files = $('#files ul');
+					$files.html('');
 
 					$.each(zip.files, function(index, zipEntry) {
 						$files.append($('<li>', {text: zipEntry.name}));
