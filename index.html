@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>PKPASS Viewer</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<input type="file" id="file">
+	</header>
+
+	<div id="container">
+		<div id="result"></div>
+		<div id="pass">
+			<div class="side front">
+				<div class="headerFields"></div>
+				<div class="primaryFields"></div>
+				<div class="secondaryFields"></div>
+				<div class="auxiliaryFields"></div>
+				<div id="qrcode"></div>
+				<div class="switch switchToBack">(i)</div>
+			</div>
+			<div class="side back">
+				<div class="switch switchToFront">&lt; back</div>
+				<div class="backFields"></div>
+			</div>
+		</div>
+		<div id="meta">
+			<dl></dl>
+		</div>
+		<div id="files">
+			<ul></ul>
+		</div>
+	</div>
+	
+	<footer>
+		See <a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/PassKit_PG/Creating.html" target="_blank">Wallet Developer Guide</a> for more information.
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="lib/jszip.min.js"></script>
+	<script src="lib/qrcode.min.js"></script>
+	<script src="scripts.js"></script>
+</body>
+</html>
